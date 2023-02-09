@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite smoke">
+	<listeners>
+		<listener class-name="resources.Listeners" />
+	</listeners>
+	<test thread-count="5" name="Smoke">
+		<groups>
+			<run>
+				<include name="Smoke" />
+			</run>
+		</groups>
+		<classes>
+			<class name="target.HomePage" />
+			<class name="target.ProductValidation" />
+			<class name="target.SearchProductValidation" />
+			<class name="target.CheckoutValidation" />
+		</classes>
+	</test>
+</suite>
+
